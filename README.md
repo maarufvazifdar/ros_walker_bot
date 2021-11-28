@@ -40,7 +40,7 @@ The walker node subscribes to the *scan* topic to get the laser data, and based 
     ```
     You sholud be able to see Turtlebot moving in the gazebo world, avoiding obstacles, and also visualize the Robot Model and laser data in RViz.
 
-3) Once you have recorded ros bag files, to playback data:
+3) Once you have recorded ros bag files, to inspect and playback data:
     ```bash
     roscore
     ```
@@ -54,6 +54,7 @@ The walker node subscribes to the *scan* topic to get the laser data, and based 
     ```bash
     cd ~/<your_ws>
     source devel/setup.bash
+    rosbag info src/ros_walker_bot/results/ros_walker_bot_bagfile.bag
     rosbag play src/ros_walker_bot/results/ros_walker_bot_bagfile.bag 
     ```
     You sholud be able to visualize the Robot TF and laser data in RViz. 
