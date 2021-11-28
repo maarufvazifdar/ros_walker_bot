@@ -52,9 +52,9 @@ class MoveBot {
    * @param void
    */
   MoveBot() {
-    pub = n.advertise<geometry_msgs::Twist>("cmd_vel", 10);    
+    pub = n.advertise<geometry_msgs::Twist>("cmd_vel", 10);
     sub = n.subscribe("scan", 10, &MoveBot::LaserscanCallback, this);
-  };
+  }
 
   /**
    * @brief Commands turtlebot to turn left.
