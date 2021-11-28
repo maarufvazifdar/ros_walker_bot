@@ -1,0 +1,14 @@
+<launch>
+
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch">
+  </include>
+
+  <node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  </node>
+  
+  <node name="joint_state_publisher" output="screen"    pkg="joint_state_publisher" respawn="false" type="joint_state_publisher">
+  </node>
+
+  <node name="walker" pkg="ros_walker_bot" type="move_bot" output="screen"/>
+
+</launch>
