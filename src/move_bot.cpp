@@ -6,7 +6,7 @@ void MoveBot::turnLeft() {
   ros::Rate rate(10);
     vel.linear.x = 0;
     vel.angular.z = 0.3;
-    ROS_DEBUG_STREAM("Forward velocity= " << vel.linear.x << ", Turn velocity=" << vel.angular.z)
+    ROS_DEBUG_STREAM("Forward velocity= " << vel.linear.x << ", Turn velocity=" << vel.angular.z);
     pub.publish(vel);
     ROS_INFO_STREAM("Turning Left");
 }
@@ -15,7 +15,7 @@ void MoveBot::turnRight() {
   ros::Rate rate(10);
     vel.linear.x = 0;
     vel.angular.z = -0.3;
-    ROS_DEBUG_STREAM("Forward velocity= " << vel.linear.x << ", Turn velocity=" << vel.angular.z)
+    ROS_DEBUG_STREAM("Forward velocity= " << vel.linear.x << ", Turn velocity=" << vel.angular.z);
     pub.publish(vel);
     ROS_INFO_STREAM("Turning Right");
 }
@@ -24,7 +24,7 @@ void MoveBot::moveForward() {
   ros::Rate rate(10);
   vel.angular.z = 0;
   vel.linear.x = 0.2;
-  ROS_DEBUG_STREAM("Forward velocity= " << vel.linear.x << ", Turn velocity=" << vel.angular.z)
+  ROS_DEBUG_STREAM("Forward velocity= " << vel.linear.x << ", Turn velocity=" << vel.angular.z);
   pub.publish(vel);
   ROS_INFO_STREAM("Moving Forward");  
 }
