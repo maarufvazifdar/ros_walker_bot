@@ -19,7 +19,7 @@
   <node name="walker" pkg="ros_walker_bot" type="move_bot" output="screen"/>
 
   <node pkg="rosbag" type="record" name="rosbag_ros_walker_bot"
-    args="record -a -O $(find ros_walker_bot)/results/turtle_roomba_bagfile"
+    args="record -a -O $(find ros_walker_bot)/results/ros_walker_bot_bagfile"
     if="$(arg record_rosbag)" />
 
 </launch>
